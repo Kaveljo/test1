@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" type="text/css" href="./css/style.css">
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+        <script src="js/jquery/jquery-1.8.2.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/msdropdown/dd.css" />
+        <script src="js/msdropdown/jquery.dd.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/msdropdown/flags.css" />
+
+    </head>
+    <body>
+        <div class="content" id="main">
+            <div class="title">
+                <p class="title-text">Prijava na Enterwell nagradnu igru!</p>
+            </div>
+            <div class="paragraph">
+                <p>U ovoj igri svi dobivamo! Ti ćeš izraditi ovu cool formu, a mi ćemo imati priliku vidjeti tvoje zlatne linije koda</p>
+            </div>
+            <div class="form-wrap">
+                <div id="ew-logo">
+                    <img class="logo-img" src="./assets/enterwell.svg">
+                </div>
+            <form class="form-box">
+                <div class="form-left-side">
+                    <div class="upload-wrap">
+                        <input type="file" id="fileToUpload" accept="image/jpeg,,image/png,application/pdf">
+                        <img src="./assets/upload.svg" id="uploadLogo">
+                        <p id="file-name"></p>
+                        <p class="upload-text">Povuci i ispusti datoteku kako bi započeo prijenos
+
+                             <br><br>ili <b id="upload-line"><u>pretraži računalo</u></b></p>
+                        <p class="supported-formats">PODRŽANI FORMATI<br>
+                            pdf, png, jpg</p>
+                    </div>
+                    <div class="input-wrap">
+                        <input type="text" class="text-input-field text-input-field-animation" id="br_racuna" placeholder=" ">
+                        <label for="br_racuna" class="floating-label">Broj računa</label>
+                        <label for="br_racuna" class="error-label">Obavezno*</label>
+                    </div>  
+                </div>
+                <div class="form-right-side">
+                    <div class="input-wrap">
+                        <input type="text" class="text-input-field text-input-field-animation" id="ime" placeholder=" " style="margin-top: 0;">
+                        <label for="ime" class="floating-label">Ime*</label>
+                        <label for="ime" class="error-label">Obavezno*</label>
+                    </div>
+                    <div class="input-wrap">
+                        <input type="text" class="text-input-field text-input-field-animation" id="prezime" placeholder=" ">
+                        <label for="prezime" class="floating-label">Prezime*</label>
+                        <label for="prezime" class="error-label">Obavezno*</label>
+                    </div>  
+                    <div class="input-wrap">
+                        <input type="text" class="text-input-field text-input-field-animation" id="adresa" placeholder=" ">
+                        <label for="adresa" class="floating-label">Adresa*</label>
+                        <label for="adresa" class="error-label">Obavezno*</label>
+                    </div>
+                    <div class="input-wrap">
+                        <input type="text" class="text-input-field text-input-field-animation" id="kucni_br" placeholder=" ">
+                        <label for="kucni_br" class="floating-label">Kućni broj*</label>
+                        <label for="kucni_br" class="error-label">Obavezno*</label>
+                    </div>
+                    <div class="input-wrap">
+                        <input type="text" class="text-input-field text-input-field-animation" id="mjesto" placeholder=" ">
+                        <label for="mjesto" class="floating-label">Mjesto*</label>
+                        <label for="mjesto" class="error-label">Obavezno*</label>
+                    </div>  
+                    <div class="input-wrap">
+                        <input type="text" class="text-input-field text-input-field-animation" id="pbr" placeholder=" ">
+                        <label for="pbr" class="floating-label">Poštanski broj*</label>
+                        <label for="pbr" class="error-label">Obavezno*</label>
+                    </div>  
+                    <div class="select-wrap">
+                            <select name="countries" id="countries" style=" width: 100%; 
+                                                                            text-align: left;
+                                                                            height: 42px;
+                                                                            margin-top: 26px;
+                                                                            background-color: #1e1e1e;
+                                                                            border: #ffffff 1px solid;
+                                                                            border-radius: 5px;">
+                                    <option value='hr' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag hr" data-title="Hrvatska">Hrvatska</option>
+                                    <option value='ba' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag ba" data-title="Bosna i Hercegovina">Bosna i Hercegovina</option>
+                                    <option value='rs' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag rs" data-title="Srbija">Srbija</option>
+                                    <option value='si' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag si" data-title="Slovenija">Slovenija</option>
+                                    <option value='me' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag me" data-title="Crna Gora">Crna Gora</option>
+                            </select>
+                    </div>  
+                    <div class="input-wrap">
+                        <input type="text" class="text-input-field text-input-field-animation" id="telefon" placeholder=" ">
+                        <label for="telefon" class="floating-label">Kontakt telefon</label>
+                        <label for="telefon" class="error-label">Obavezno*</label>
+                    </div>  
+                    <div class="input-wrap">
+                        <input type="text" class="text-input-field text-input-field-animation" id="email" placeholder=" ">
+                        <label for="email" class="floating-label">E-mail*</label>
+                        <label for="email" class="error-label">Obavezno*</label>
+                    </div>
+                </div>
+            </form>
+                <div class="sub-btn-wrap">
+                    <button class="sub-btn">Pošalji</button>
+                    <img src="./assets/back-btn.png" class="back-img" id="send-data">
+                </div>
+            </div>
+        <!--Modal content-->
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                <img src="" id="modal-img">
+                <p id="modal-title"></p>
+                <p id="modal-text"></p>
+                </div>
+                <div class="sub-btn-wrap">
+                    <button class="sub-btn" id="modal-btn">OK</button>
+                    <img src="./assets/back-btn.png" class="back-img" id="close-modal">
+                </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function() {
+                $("#countries").msDropdown();
+            })
+
+            $("#uploadLogo").click(function () {
+                $("#fileToUpload").trigger('click');
+            });
+            $("#upload-line").click(function (){
+                $("#fileToUpload").trigger('click');
+            });
+
+            $('#fileToUpload').change(function() {
+                $(".supported-formats").css("display","none");
+                $(".upload-text").css("margin-top","120px");
+                $('#fileToUpload').val() ? $("#uploadLogo").attr("src","./assets/ss_success.svg") : $("#uploadLogo").attr("src","./assets/ss_fail.svg");
+                var fileNameIndex = $('#fileToUpload').val().lastIndexOf('\\') + 1;
+                var filename =  $('#fileToUpload').val().substr(fileNameIndex);
+                $("#file-name").text(filename);
+                $('#uploadLogo').css("margin-top","25px");
+                $("#file-name").css("margin-bottom","90px");
+            });
+
+            $("html").on("dragover", function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                $("h1").text("Drag here");
+            });
+
+            $("html").on("drop", function(e) { e.preventDefault(); e.stopPropagation(); });
+
+
+            $('.upload-wrap').on('dragenter', function () {
+                e.stopPropagation();
+                e.preventDefault();
+            });
+            $('.upload-wrap').on('dragover', function (e) {
+                e.stopPropagation();
+                e.preventDefault();
+            });
+            $('.upload-wrap').on('drop', function (e) {
+                e.stopPropagation();
+                e.preventDefault();
+
+                var file = e.originalEvent.dataTransfer.files;
+                var fd = new FormData();
+                console.log(fd);
+                fd.append('#fileToUpload', file[0]);
+                
+                $('#fileToUpload').val() ? $("#uploadLogo").attr("src","./assets/ss_success.svg") : $("#uploadLogo").attr("src","./assets/ss_fail.svg");
+                var fileNameIndex = $('#fileToUpload').val().lastIndexOf('\\') + 1;
+                var filename =  $('#fileToUpload').val().substr(fileNameIndex);
+                $("#file-name").text(filename);
+                $('#uploadLogo').css("margin-top","25px");
+                $("#file-name").css("margin-bottom","90px");
+            });
+
+
+
+            $(".text-input-field").blur(function() {
+                if(!$(this).val()){
+                    $(this).css("border-color", "#d9452d");
+                    $(this).parent().find(".error-label").text("*Obavezna ispuna polja");
+                    $(this).parent().find(".error-label").css("color","#d9452d");
+                    $(this).parent().find(".error-label").css("visibility","visible")
+                }
+                else{
+                    $(this).css("border-color", "#ffffff");
+                    $(this).parent().find(".error-label").css("color","#ffffff");
+                    $(this).parent().find(".error-label").css("visibility","hidden")
+            }});
+
+
+                
+            $("#send-data").click(function() {
+                var info={
+                    datoteka:$('#fileToUpload').val(),
+                    ime:$("#ime").val(),
+                    prezime:$("#prezime").val(),
+                    adresa:$("#adresa").val(),
+                    kucni_br:$("#kucni_br").val(),
+                    mjesto:$("#mjesto").val(),
+                    pbr:$("#pbr").val(),
+                    drzava:$("#countries").val(),
+                    telefon:$("#telefon").val(),
+                    email:$("#email").val()
+                }
+                $(".modal").css("display", "block");
+                if(checkInput(info)){
+                    $("#modal-btn").text("OK");
+                    $("#modal-img").attr("src","./assets/succes.svg");
+                    $("#modal-title").text( "Uspješna prijava" );
+                    $("#modal-text").text( "Dok čekaš rezultate ovog zadatka opusti se uz neko dobro pivo! Kod nas u Enterwellu nema razloga za brigu." );
+                    console.log(info)
+                }
+                else{
+                    $("#modal-btn").text("Pokušajte Ponovo");
+                    $("#modal-img").attr("src","./assets/error.svg");
+                    $("#modal-title").text( "Neuspješna prijava" );
+                    $("#modal-text").text( "Tko radi taj i griješi." );
+                }
+                
+
+            });
+            $("#close-modal").click(function() {
+                $(".modal").css("display", "none");
+            });
+            
+            function checkInput(info) {
+                if(info.datoteka && info.ime && info.prezime && info.adresa &&
+                    info.kucni_br && info.mjesto && info.drzava && info.pbr && 
+                    info.telefon && info.email) return 1;
+                else return 0;
+            }
+        </script>
+    </body>
+    <footer>
+    </footer>
+</html>
